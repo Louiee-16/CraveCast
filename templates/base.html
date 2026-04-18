@@ -158,7 +158,11 @@
                 <i class='bx bx-cloud-upload'></i> <span>Upload Data</span>
             </a>
         </li>
-
+        <li class="{% if request.resolver_match.url_name == 'admin-management' %}active{% endif %}">
+            <a href="{% url 'admin-management' %}">
+                <i class='bx bx-cloud-upload'></i> <span>Admin & Login</span>
+            </a>
+        </li>
         <li class="{% if request.resolver_match.url_name == 'view-settings' %}active{% endif %}">
             <a href="{% url 'view-settings' %}">
                 <i class='bx bx-cog'></i> <span>Settings</span>
